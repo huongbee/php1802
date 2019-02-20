@@ -60,12 +60,17 @@
 $a = 2; //number
 $b = '3'; //string
 
-if($a !== $b){
-    echo 'True';
-}
-else{
-    echo 'False';
-}
+// if($a !== $b){
+//     echo 'True';
+// }
+// else{
+//     echo 'False';
+// }
+// if($a !== $b) echo 'True'; 
+// else echo 'False';
+
+//  a > b ? 'dung' : 'sai';
+
 
 // if($a == $b){
 //     echo "$a == $b";
@@ -76,4 +81,9 @@ else{
 // else{
 //     echo "$a < $b";
 // }
+
+$a = 5;
+$b = 8;
+
+// Max cua 5 va 8 la 8
 ?>
