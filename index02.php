@@ -82,20 +82,42 @@ $b = '3'; //string
 //     echo "$a < $b";
 // }
 
-$a = 5;
-$b = 8;
+// $a = 5;
+// $b = 8;
 // echo $a < $b ? $b : $a;
 
-echo "Max cua $a va $b la ". ($a < $b ? $b : $a);
+// echo "Max cua $a va $b la ". ($a < $b ? $b : $a);
 
 // 2 * 2 + 5 = 9
 // 2 * (2 + 5) = 2*7 = 
 // $s = 'string5';
 // echo (int)$s;
 
-$a = 5;
-$b = 8;
-$c = 6;
+$a = 15;
+$b = 80;
+$c = 60;
+
+echo ($a > $b ? $a : $b) > $c ? ($a > $b ? $a : $b) : $c;
+// $a > $b ? $a : $b = $x 
+// $x > $c ? $x : $c
+
+echo ($a > $b ? $a : $b) > ($b > $c ? $b : $c) ? ($a > $b ? $a : $b) :  ($b > $c ? $b : $c) 
+
+/**
+ * $a > $b ? $a : $b = $x
+ * $b > $c ? $b : $c = $y
+ * $x > $y ? $x : $y
+ */
+
+// if($a > $b and $a > $c) echo $a;
+// elseif($a > $b and $b < $c){
+//     if($a > $c){
+//         echo $a;
+//     }
+//     else echo $c;
+// }
+// else echo $b;
+
 
 
 ?>
