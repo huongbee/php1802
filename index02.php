@@ -21,12 +21,20 @@
 // $a %= $b;   // $a = $a % $b
 // echo $a; //4
 
-$a = 'Chao ban';
-$name = 'Ti';
+// $a = 'Chao ban';
+// $name = 'Ti';
 // $a .= ' '.$name;  // $a = $a . $name;
 // echo $a .' '. $name;
-$a .= ' $name';  
+// $a .= ' $name';  
 // $a .= " $name";  
+
+// echo $a;
+
+
+$a = 2;
+// $a = $a*$a;
+// $a = pow($a,4);
+$a = $a**4;
 
 echo $a;
 
