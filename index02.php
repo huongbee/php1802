@@ -69,7 +69,7 @@ $b = '3'; //string
 // if($a !== $b) echo 'True'; 
 // else echo 'False';
 
-//  a > b ? 'dung' : 'sai';
+
 
 
 // if($a == $b){
@@ -84,6 +84,18 @@ $b = '3'; //string
 
 $a = 5;
 $b = 8;
+// echo $a < $b ? $b : $a;
 
-// Max cua 5 va 8 la 8
+echo "Max cua $a va $b la ". ($a < $b ? $b : $a);
+
+// 2 * 2 + 5 = 9
+// 2 * (2 + 5) = 2*7 = 
+// $s = 'string5';
+// echo (int)$s;
+
+$a = 5;
+$b = 8;
+$c = 6;
+
+
 ?>
