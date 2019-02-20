@@ -97,11 +97,11 @@ $a = 15;
 $b = 80;
 $c = 60;
 
-echo ($a > $b ? $a : $b) > $c ? ($a > $b ? $a : $b) : $c;
+// echo ($a > $b ? $a : $b) > $c ? ($a > $b ? $a : $b) : $c;
 // $a > $b ? $a : $b = $x 
 // $x > $c ? $x : $c
 
-echo ($a > $b ? $a : $b) > ($b > $c ? $b : $c) ? ($a > $b ? $a : $b) :  ($b > $c ? $b : $c) 
+// echo ($a > $b ? $a : $b) > ($b > $c ? $b : $c) ? ($a > $b ? $a : $b) :  ($b > $c ? $b : $c) ;
 
 /**
  * $a > $b ? $a : $b = $x
@@ -118,6 +118,13 @@ echo ($a > $b ? $a : $b) > ($b > $c ? $b : $c) ? ($a > $b ? $a : $b) :  ($b > $c
 // }
 // else echo $b;
 
+$a = 20;
+switch($a){
+    case 1: echo 'Mot';break;
+    case 2: echo 'Hai';break;
+    case 3: echo 'Ba';break;
+    default: echo $a;
+}
 
 
 ?>
