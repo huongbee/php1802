@@ -15,13 +15,26 @@ $arr4 = [
     ],
     2 => 12
 ];
-// print_r($arr);
-print_r($arr4['key2']);
+$arr4 = array(
+    'key1'=>2,
+    'key2'=> array(
+        7 , 8, 'Hello',
+        'key_n'=>'Xin chao'
+    ),
+    2 => 12
+);
+print_r($arr4);
+
+$new = $arr4['key2'];
+echo $new[2];
+print_r($arr4['key2'][2]);
 // echo $arr4['key2'];
 
 
 
 // echo $arr; // use for string
+
+
 
 
 ?>
