@@ -8,8 +8,24 @@
         <title>Bài tập Array</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <!-- <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet"> -->
     </head>
     <body>
-        <h2>Bài tập</h2>
+            <div class="content">
+                <div class="item">
+                    <img src="images/iphone-xs-max-gray-400x460.png">
+                    <div class="name"> Iphone </div>
+                </div> 
+                <div class="item">
+                    <img src="images/iphone-xs-max-gray-400x460.png">
+                    <div>
+                        <b>Iphone X</b>
+                    </div>
+                </div>
+            </div>
+            <div id='footer'>
+                <img src="images/iphone-xs-max-gray-400x460.png">
+            </div>
     </body>
+
 </html>
