@@ -11,10 +11,21 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet"> -->
     </head>
     <body>
+        <div>
+
+        <?php
+        require_once 'lib/data.php';
+        require_once 'lib/data.php';
+
+        echo $link;
+        
+        ?>
+
+        </div>
             <div class="content">
                 <div class="item">
-                    <img src="images/iphone-xs-max-gray-400x460.png">
-                    <div class="name"> Iphone </div>
+                    <img  src="https://cdn.tgdd.vn/Products/Images/42/186395/oppo-r17-pro-2-400x460.png">
+                    <div class="name"> <?php echo 'Name'?> </div>
                 </div> 
                 <div class="item">
                     <img src="images/iphone-xs-max-gray-400x460.png">
@@ -23,9 +34,9 @@
                     </div>
                 </div>
             </div>
-            <div id='footer'>
+            <!-- <div id='footer'>
                 <img src="images/iphone-xs-max-gray-400x460.png">
-            </div>
+            </div> -->
     </body>
 
 </html>

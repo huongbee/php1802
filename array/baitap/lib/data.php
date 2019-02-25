@@ -1,5 +1,11 @@
 <?php
 
+
+class Student{
+    var $a = 1;
+}
+
+
 $link = 'https://cdn.tgdd.vn/Products/Images/42/';
 $arrProduct = [
     [
@@ -47,7 +53,7 @@ $arrProduct = [
         'image'=>'190321/iphone-xs-max-gray-400x460.png',
         'price'=>'33900000'
     ],
-]
+];
 
 
 ?>
