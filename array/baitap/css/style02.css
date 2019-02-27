@@ -13,7 +13,41 @@ body{
     background-color: #fff;
     float: left;
 }
-
-.hinhsp img{
-    width: 100px
+.hinhsp{
+    width: 40%;
+    float: left;
 }
+.thongtin{
+    width: 60%;
+    float: left;
+}
+.hinhsp img{
+    width: 140px;
+    margin: 35px auto;
+}
+.thongtin h2{
+    font-size: 18px
+}
+.thongtin p{
+    margin: 5px auto;
+}
+.hinhsp, .thongtin{
+    height: 235px;
+}
+.tensanpham{
+    clear: both;
+}
+.tensanpham p, .dongia p{
+    padding-left: 20px ;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px
+}
+.dongia p{
+    color: red
+}
+p.khuyenmai{
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
