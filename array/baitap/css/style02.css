@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(255, 220, 175);
+}
+.container{
+    width: 1200px;
+    margin: 0px auto 
+}
+
+.sanpham{
+    /* width: 380px; */
+    width: calc((1200px - 60px) / 3);
+    margin: 10px;
+    background-color: #fff;
+    float: left;
+}
+
+.hinhsp img{
+    width: 100px
+}
