@@ -18,7 +18,7 @@
         <?php foreach($arrProduct as $p): ?>
         <div class="sanpham">
             <div class="hinhsp">
-                <img src="images/iphone-xs-max-gray-400x460.png">
+                <img src="<?=$link.$p['image']?>">
             </div>
             <div class="thongtin">
                 <h2><?php echo $p['name']?></h2>
