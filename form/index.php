@@ -24,7 +24,7 @@
         Message: <textarea name="txtMessage" rows="3">123456</textarea>
         <br><br>
         Course: 
-        <select name="txtCourse">
+        <select name="hobbies" multiple style="height:18px">
             <option value="PHP">PHP & MySQL</option>
             <option value="Mean">Mean</option>
             <option value="React">React</option>
@@ -32,7 +32,7 @@
         </select>
         <br><br>
         Course: 
-        <select name="txtCourse" multiple>
+        <select name="txtCourse">
             <option value="PHP">PHP & MySQL</option>
             <option value="Mean">Mean</option>
             <option value="React">React</option>
