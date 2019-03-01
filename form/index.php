@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
     <form>
@@ -24,7 +25,7 @@
         Message: <textarea name="txtMessage" rows="3">123456</textarea>
         <br><br>
         Course: 
-        <select name="hobbies" multiple style="height:18px">
+        <select name="hobbies" multiple>
             <option value="PHP">PHP & MySQL</option>
             <option value="Mean">Mean</option>
             <option value="React">React</option>
