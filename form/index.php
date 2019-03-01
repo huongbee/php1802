@@ -69,8 +69,11 @@
                         </div>
                     </div>
                      
-                    <br><br>
-                    Password: <input type="password" name="txtPw" placeholder="Pw">
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input class="form-control" type="password" name="txtPw" placeholder="Pw">
+                    </div>
+                     
                     <br><br>
                     Gender:
                     <label>
@@ -97,9 +100,10 @@
                         <option value="Android">Android</option>
                     </select>
                     <br><br>
-                    <button type="reset">Reset</button>
-                    <button type="button">No action</button>
-                    <button type="submit">Send</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button type="button" class="btn btn-danger">No action</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <a class="btn btn-info" href="https://khoapham.vn/dang-ki-hoc.html" target="_blank">khoapham.vn</a>
                 </form>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
