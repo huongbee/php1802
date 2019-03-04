@@ -12,6 +12,7 @@
 <body>
     <div class="container">
     <?php
+        $pt = '*';
         // if(isset($_POST['btnSubmit'])){
         //     $a = $_POST['txtSoa'];
         //     $b = $_POST['txtSob'];
@@ -24,13 +25,32 @@
         //     print_r($_POST);
         //     echo 'chua khoi tao $_POST["btnSubmit"]';
         // }
-
+        // $kq = '';
         if(!empty($_POST)){
-            print_r($_POST);
+            $a = $_POST['txtSoa'];
+            $b = $_POST['txtSob'];
+            $pt = $_POST['pheptinh'];
+            if($pt == '+'){
+                $kq = $a+$b;
+            }
+            elseif($pt=='-'){
+                $kq = $a-$b;
+            }
+            elseif($pt=='*'){
+                $kq = $a*$b;
+            }
+            elseif($pt=='/'){
+                $kq = $a/$b;
+            }
+            else{
+                $kq = $a%$b;
+            }
+            // echo $kq;
         }
-        else{
-            echo 'Mang $_POST dang rong';
-        }
+
+        
+        // isset($kq) ? $kq : 0;
+        // isset($pt) && $pt=='*' ? 'selected' : '';
         ?>
         <div class="row justify-content-md-center">
             <div class="col-6">
@@ -41,7 +61,7 @@
                             Số a:
                         </label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="txtSoa" placeholder="Nhập số a" >
+                            <input value="<?=isset($a) ? $a : ''?>" class="form-control" type="text" name="txtSoa" placeholder="Nhập số a" >
                         </div>
                     </div>
                     <div class="form-group row">
@@ -49,18 +69,18 @@
                             Số b:
                         </label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="txtSob" placeholder="Nhập số b">
+                            <input value="<?=isset($b)?$b:''?>" class="form-control" type="text" name="txtSob" placeholder="Nhập số b">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-4">Phép tính:</label>
                         <div class="col-8">
                             <select class="form-control" name="pheptinh">
-                                <option value="+">Cộng</option>
-                                <option value="-">Trừ</option>
-                                <option value="*">Nhân</option>
-                                <option value="/">Chia</option>
-                                <option value="%">Chia dư</option>
+                                <option <?=$pt=='+'?'selected':''?> value="+">Cộng</option>
+                                <option <?=$pt=='-'?'selected':''?> value="-">Trừ</option>
+                                <option <?=$pt=='*'?'selected':''?> value="*">Nhân</option>
+                                <option <?=$pt=='/'?'selected':''?> value="/">Chia</option>
+                                <option <?=$pt=='%'?'selected':''?> value="%">Chia dư</option>
                             </select>
                         </div>
                     </div>
@@ -72,7 +92,7 @@
                             Kết quả:
                         </label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="txtKetqua" placeholder="Kết quả" readonly>
+                            <input class="form-control" type="text" name="txtKetqua" placeholder="Kết quả" readonly value="<?=isset($kq) ? $kq : ''?>">
                         </div>
                     </div>
                 </form>
