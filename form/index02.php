@@ -8,13 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
-
 <body>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-6">
                 <h2>Form</h2>
-                <form>
+                <form action="xulyform.php" method="POST">
                     <div class="form-group row">
                         <label class="col-4">
                             Username:
@@ -57,7 +56,7 @@
                         <label class="col-4">Course:</label>
 
                         <div class="col-8">
-                            <select class="form-control" name="hobbies">
+                            <select class="form-control" name="course">
                                 <option value="PHP">PHP & MySQL</option>
                                 <option value="Mean">Mean</option>
                                 <option value="React">React</option>
