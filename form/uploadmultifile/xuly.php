@@ -8,13 +8,24 @@ $files = $_FILES['images'];
 //     move_uploaded_file($tmp,"hinhanh/$name");
 // }
 
+//kiem tra file size
+foreach($files['size'] as $key=>$size){
+    if($size > 100*1024){ // <=100kb
+        $name = $files['name'][$key];
+        exit("File $name too large");
+        // return;
+    }
+}
+
+
 for($i = 0; $i < count($files['name']); $i++){
     $tmp = $files['tmp_name'][$i];
-    $destination = 'hinhanh/'.$files['name'][$i];
+    $newName = time().$files['name'][$i];
+    $destination = 'hinhanh/'.$newName;
     move_uploaded_file($tmp,$destination);
 }
 
-echo 'thanh cong';
+// echo 'thanh cong';
 
 /*
 $img = [
@@ -43,5 +54,8 @@ foreach($img as $hinhanh){
  * 
  */
 
+
+
+// unlink('https://cdn.tgdd.vn/Products/Images/42/192003/samsung-galaxy-a9-2018-blue-400x400.jpg');
 
 ?>
