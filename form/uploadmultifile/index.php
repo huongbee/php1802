@@ -9,8 +9,6 @@
 <body>
     <form action="xuly.php" method="post" enctype="multipart/form-data">
         <input type="file" name='images[]' multiple>
-        <input type="text" name='txtname[]' >
-        <input type="text" name='txtname[]' >
         <button>Upload</button>
     </form>
 </body>
