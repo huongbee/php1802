@@ -17,6 +17,15 @@ session_start();
             <div class="col-6">
                 <br><br><br>
                 <h3 class="text-center">User Login</h3>
+                <?php
+                
+                if(isset($_SESSION['error'])){
+                    echo "<div class='text-danger'>
+                    $_SESSION[error] </div>";
+                    unset($_SESSION['error']);
+                }
+                
+                ?>
                 <form action="xuly.php" method="POST">
                     <div class="form-group">
                         <label for="">Username</label>
@@ -26,6 +35,7 @@ session_start();
                         if(isset($_SESSION['error_username'])){
                             echo "<div class='text-danger'>
                             $_SESSION[error_username] </div>";
+                            unset($_SESSION['error_username']);
                         }
                         
                         ?>
@@ -38,6 +48,8 @@ session_start();
                         if(isset($_SESSION['error_password'])){
                             echo "<div class='text-danger'>
                             $_SESSION[error_password] </div>";
+                            
+                            unset($_SESSION['error_password']);
                         }
                         
                         ?>

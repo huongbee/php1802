@@ -12,8 +12,11 @@ if(isset($_POST['btnLogin'])){
             header('Location: http://localhost/php1802/login/login.php');
         }
         else{
-            echo 'success';
-            //login
+            //thanh cong
+            $userId = md5('111111admin'); 
+            $_SESSION['success'] = $userId;
+            header('Location: index.php');
+
         }
     }
 

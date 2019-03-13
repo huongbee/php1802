@@ -1,3 +1,18 @@
+<?php
+session_start();
+if(!isset($_SESSION['success'])){ // chua login
+    $_SESSION['error'] = 'Pls login first!';
+    header('Location: login.php');
+    return;
+}
+elseif($_SESSION['success'] != md5('111111admin')){
+    $_SESSION['error'] = 'Invalid user info!';
+    header('Location: login.php');
+    return;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
