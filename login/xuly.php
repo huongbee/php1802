@@ -14,6 +14,9 @@ if(isset($_POST['btnLogin'])){
         else{
             //thanh cong
             $userId = md5('111111admin'); 
+            if(isset($_POST['remember']) && $_POST['remember']==1){
+                setcookie('user',$userId, time()+120);
+            }
             $_SESSION['success'] = $userId;
             header('Location: index.php');
 

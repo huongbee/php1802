@@ -1,16 +1,32 @@
 <?php
 session_start();
-if(!isset($_SESSION['success'])){ // chua login
-    $_SESSION['error'] = 'Pls login first!';
-    header('Location: login.php');
-    return;
+if(!isset($_SESSION['success'])){ // ko co session
+    // kiem tra cookie
+    if(!isset($_COOKIE['user'])){ //ko co cookie
+        $_SESSION['error'] = 'Pls login first!';
+        header('Location: login.php');
+        return;
+    }
+    elseif($_COOKIE['user'] != md5('111111admin')){
+        $_SESSION['error'] = 'error cookie!';
+        header('Location: login.php');
+        return;
+    }
+    else{
+        setcookie('user',$userId, time()+120);
+        // $_SESSION['success'] = $_COOKIE['user'];
+    }
 }
 elseif($_SESSION['success'] != md5('111111admin')){
-    $_SESSION['error'] = 'Invalid user info!';
+    $_SESSION['error'] = 'error session!';
     header('Location: login.php');
     return;
 }
+//ton tai session || ton tai cookie
 
+// 53 -> 55
+// 54 -> 56
+// 
 
 ?>
 <!DOCTYPE html>

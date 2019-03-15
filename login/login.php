@@ -29,7 +29,7 @@ session_start();
                 <form action="xuly.php" method="POST">
                     <div class="form-group">
                         <label for="">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="admin">
                         <?php
 
                         if(isset($_SESSION['error_username'])){
@@ -42,7 +42,7 @@ session_start();
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password" value="111111">
                         <?php
 
                         if(isset($_SESSION['error_password'])){
@@ -56,7 +56,7 @@ session_start();
                     </div>
                     <div class="form-group">
                         <label for="rememberid">
-                            <input id="rememberid" type="checkbox" name="remember" >
+                            <input id="rememberid" type="checkbox" name="remember" value="1">
                             Remember me?
                         </label>
                     </div>
