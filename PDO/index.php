@@ -23,7 +23,11 @@ $sql = 'SELECT * FROM users WHERE id = ? OR username = ?';
 
 $stmt = $connect->prepare($sql); // PDOStatement || FALSE
 if($stmt){
-    $check = $stmt->execute([2,'huonghuong02']);
+    $id = 5;
+    $username = 'huong';
+    $stmt->bindParam(1,$id);
+    $stmt->bindValue(2,$username);
+    $check = $stmt->execute();
     if($check){
         // get data
         // $data = $stmt->fetchAll(PDO::FETCH_BOTH);
