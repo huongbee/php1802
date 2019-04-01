@@ -18,19 +18,36 @@ catch(PDOException $e){
 // $num = $connect->exec($sql);
 // echo $num;
 
-$sql = 'SELECT * FROM users';
+// $sql = 'SELECT * FROM users';
+$sql = 'SELECT * FROM users WHERE id = ? OR username = ?';
+
 $stmt = $connect->prepare($sql); // PDOStatement || FALSE
 if($stmt){
-    $check = $stmt->execute();
+    $check = $stmt->execute([2,'huonghuong02']);
     if($check){
-        //get data
-        $data = $stmt->fetchAll();
+        // get data
+        // $data = $stmt->fetchAll(PDO::FETCH_BOTH);
+        // $data = $stmt->fetchAll(PDO::FETCH_NUM);
+        // $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $data = $stmt->fetchAll(PDO::FETCH_OBJ);
+        // echo $data[0]->username;
+        // $data = $stmt->fetch(PDO::FETCH_OBJ);
+        // echo $data->username;
         print_r($data);
     }
     else echo 'error execute';
 }
-else echo 'error prepare'
+else echo 'error prepare';
 
+// define('PI',3.34);
+// class A{
+//     const PI = 3.14;
+//     var $name = 'Admin';
+// }
+// echo A::PI;
+// echo (new A)->name;
 
+// $a['username'];
+// $a->username;
 
 ?>
