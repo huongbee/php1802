@@ -3,6 +3,7 @@
 class DBConnect{
     private $options = [];
     private $connect = null;
+    private $stmt = null;
     /**
      * Connect to database
      */
@@ -24,13 +25,35 @@ class DBConnect{
      * @return bool
      */
     function executeQuery(string $sql, array $values=[]){
-        $stmt = $this->connect->prepare($sql);
+        $this->stmt = $this->connect->prepare($sql);
         for($i=1; $i<=count($values); $i++){
-            $stmt->bindValue($i,$values[$i-1]);
+            $this->stmt->bindValue($i,$values[$i-1]);
         }
-        return $stmt->execute();
+        return $this->stmt->execute();
+    }
+    /**
+     * Use for SELECT return only 1 row
+     * @param string $sql
+     * @param array $values = []
+     * @return object (row)
+     */
+    function getOneRow($sql, $values=[]){
+        $this->executeQuery($sql,$values);
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    /**
+     * Use for SELECT return >=2 rows
+     * @param string $sql
+     * @param array $values = []
+     * @return array objects (rows)
+     */
+
+    function getMoreRow($sql, $values=[]){
+        $this->executeQuery($sql,$values);
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    
 }
 
 ?>
