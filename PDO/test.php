@@ -2,7 +2,7 @@
 
 require_once 'DBConnect.php';
 
-$con = new DBConnect;
+$con = new DBConnect();
 
 // $sql = 'UPDATE ....';
 
