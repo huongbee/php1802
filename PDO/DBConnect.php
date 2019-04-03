@@ -19,7 +19,7 @@ class DBConnect{
     }
 
     /**
-     * Use for INSERT | UPDATE | DELETE
+     * Use for INSERT | UPDATE | DELETE 
      * @param string $sql
      * @param array $values = []
      * @return bool
@@ -41,7 +41,6 @@ class DBConnect{
         $this->executeQuery($sql,$values);
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
-
     /**
      * Use for SELECT return >=2 rows
      * @param string $sql
@@ -53,7 +52,7 @@ class DBConnect{
         $this->executeQuery($sql,$values);
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
-    
 }
+
 
 ?>

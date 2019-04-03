@@ -19,7 +19,13 @@ $con = new DBConnect();
 // $data = $con->getOneRow($sql);
 
 
-$sql = 'SELECT * FROM users WHERE id <= ?';
-$data = $con->getMoreRow($sql,[4]);
-print_r($data);
+// $sql = 'SELECT * FROM users WHERE id <= ?';
+// $data = $con->getMoreRow($sql,[4]);
+// print_r($data);
+
+
+$sql = 'DROP database php1802';
+$check = $con->executeQuery($sql);
+if($check) echo 'Deleted!';
+else echo 'Error';
 ?>
